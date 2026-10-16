@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="프리크누피아 개인정보 처리방침">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>프리크누피아 개인정보 처리방침</title>
+
+    <style>
+        :root {
+            --primary: #7b1f2f;
+            --primary-dark: #5d1422;
+            --primary-soft: #f9f1f3;
+            --background: #f6f7f9;
+            --surface: #ffffff;
+            --text: #20242a;
+            --muted: #667085;
+            --line: #e5e7eb;
+            --shadow: 0 16px 40px rgba(28, 35, 48, 0.07);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: "Noto Sans KR", sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            word-break: keep-all;
+        }
+
+        a {
+            color: var(--primary);
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        .hero {
+            padding: 72px 24px 116px;
+            color: #fff;
+            background:
+                radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.13), transparent 28%),
+                linear-gradient(135deg, var(--primary-dark), var(--primary));
+        }
+
+        .hero__inner,
+        .container {
+            width: min(100%, 920px);
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            min-height: 32px;
+            margin: 0 0 18px;
+            padding: 5px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.3;
+            letter-spacing: -0.045em;
+        }
+
+        .hero__description {
+            max-width: 650px;
+            margin: 18px 0 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 17px;
+        }
+
+        .container {
+            position: relative;
+            margin-top: -64px;
+            padding: 0 24px 80px;
+        }
+
+        .policy {
+            overflow: hidden;
+            border: 1px solid rgba(229, 231, 235, 0.9);
+            border-radius: 22px;
+            background: var(--surface);
+            box-shadow: var(--shadow);
+        }
+
+        .summary {
+            padding: 30px 34px;
+            border-bottom: 1px solid var(--line);
+            background: var(--primary-soft);
+        }
+
+        .summary strong {
+            color: var(--primary-dark);
+        }
+
+        .summary p {
+            margin: 0;
+        }
+
+        .summary p + p {
+            margin-top: 10px;
+        }
+
+        .sections {
+            padding: 12px 34px 34px;
+        }
+
+        .section {
+            padding: 32px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .section:last-child {
+            border-bottom: 0;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 14px;
+            font-size: 21px;
+            line-height: 1.45;
+            letter-spacing: -0.025em;
+        }
+
+        .section-number {
+            display: grid;
+            flex: 0 0 auto;
+            width: 30px;
+            height: 30px;
+            place-items: center;
+            border-radius: 9px;
+            background: var(--primary-soft);
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        p + p {
+            margin-top: 12px;
+        }
+
+        ol {
+            margin: 16px 0 0;
+            padding-left: 24px;
+        }
+
+        li {
+            padding-left: 5px;
+        }
+
+        li + li {
+            margin-top: 7px;
+        }
+
+        .contact-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .contact-card {
+            padding: 20px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: #fbfbfc;
+        }
+
+        .contact-card__role {
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .contact-card__name {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .contact-card dl {
+            display: grid;
+            grid-template-columns: 52px 1fr;
+            gap: 4px 10px;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .contact-card dt {
+            color: var(--muted);
+        }
+
+        .contact-card dd {
+            min-width: 0;
+            margin: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .footer {
+            padding: 28px 24px 44px;
+            color: var(--muted);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 15px;
+                word-break: normal;
+            }
+
+            .hero {
+                padding: 52px 20px 96px;
+            }
+
+            .hero__description {
+                font-size: 15px;
+            }
+
+            .container {
+                margin-top: -52px;
+                padding: 0 14px 56px;
+            }
+
+            .policy {
+                border-radius: 18px;
+            }
+
+            .summary,
+            .sections {
+                padding-right: 22px;
+                padding-left: 22px;
+            }
+
+            .section {
+                padding: 27px 0;
+            }
+
+            h2 {
+                align-items: flex-start;
+                font-size: 19px;
+            }
+
+            .contact-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero__inner">
+            <p class="eyebrow">프리크누피아 · PRIVACY POLICY</p>
+            <h1>개인정보 처리방침</h1>
+            <p class="hero__description">
+                프리크누피아는 이용자의 개인정보를 소중히 여기며, 관련 법령에 따라 안전하게 관리합니다.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="policy">
+            <section class="summary" aria-label="개인정보 처리방침 안내">
+                <p>
+                    <strong>경북대학교</strong>는 「개인정보 보호법」 제32조에 따라 개인정보의 항목이 수록된
+                    개인정보파일을 개인정보보호위원회에 등록하고 있습니다.
+                </p>
+                <p>
+                    경북대학교가 보유 중인 개인정보파일과 개별 개인정보파일의 처리 목적, 개인정보 항목 및
+                    처리·보유 기간은
+                    <a href="https://www.privacy.go.kr" target="_blank" rel="noopener noreferrer">개인정보보호 포털</a>에서
+                    확인할 수 있습니다.
+                </p>
+            </section>
+
+            <div class="sections">
+                <section class="section">
+                    <h2><span class="section-number">01</span>개인정보의 파기</h2>
+                    <p>
+                        경북대학교는 개인정보 보유기간의 경과, 처리 목적 달성 등으로 개인정보가 불필요하게 되었을 때에는
+                        지체 없이 해당 개인정보를 파기합니다.
+                    </p>
+                    <p>
+                        정보주체로부터 동의받은 개인정보의 보유기간이 경과하거나 처리 목적이 달성되었음에도 다른 법령에 따라
+                        개인정보를 계속 보존해야 하는 경우에는 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관 장소를
+                        달리하여 보존합니다.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2><span class="section-number">02</span>목적 외 이용 및 제3자 제공</h2>
+                    <p>
+                        경북대학교는 원칙적으로 정보주체의 개인정보를 수집·이용 목적으로 명시한 범위 안에서 처리하며,
+                        다음의 경우를 제외하고는 정보주체의 사전 동의 없이 본래의 목적 범위를 초과하여 처리하거나 제3자에게
+                        제공하지 않습니다.
+                    </p>
+                    <ol>
+                        <li>정보주체로부터 별도의 동의를 받은 경우</li>
+                        <li>다른 법률에 특별한 규정이 있는 경우</li>
+                        <li>정보주체 또는 제3자의 급박한 생명, 신체, 재산의 이익을 위해 필요하다고 인정되는 경우</li>
+                        <li>다른 법률에서 정하는 소관 업무를 수행하기 위해 필요하고 보호위원회의 심의·의결을 거친 경우</li>
+                        <li>조약 또는 국제협정의 이행을 위해 외국 정부나 국제기구에 제공할 필요가 있는 경우</li>
+                        <li>범죄 수사와 공소의 제기 및 유지를 위해 필요한 경우</li>
+                        <li>법원의 재판 업무 수행을 위해 필요한 경우</li>
+                        <li>형 및 감호, 보호처분의 집행을 위해 필요한 경우</li>
+                        <li>공중위생 등 공공의 안전과 안녕을 위해 긴급히 필요한 경우</li>
+                    </ol>
+                </section>
+
+                <section class="section">
+                    <h2><span class="section-number">03</span>개인정보 보호 책임자</h2>
+                    <p>개인정보 보호와 관련한 문의는 아래 담당자에게 연락해 주세요.</p>
+
+                    <div class="contact-list">
+                        <div class="contact-card">
+                            <div class="contact-card__role">개인정보 보호책임자</div>
+                            <div class="contact-card__name">사무국장 이태호</div>
+                            <dl>
+                                <dt>소속</dt>
+                                <dd>사무국</dd>
+                                <dt>전화</dt>
+                                <dd><a href="tel:053-950-2501">053-950-2501</a></dd>
+                                <dt>이메일</dt>
+                                <dd><a href="mailto:privacy@knu.ac.kr">privacy@knu.ac.kr</a></dd>
+                            </dl>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card__role">개인정보 보호담당자</div>
+                            <div class="contact-card__name">총무과 주무관 김혜린</div>
+                            <dl>
+                                <dt>소속</dt>
+                                <dd>사무국 총무과</dd>
+                                <dt>전화</dt>
+                                <dd><a href="tel:053-950-2565">053-950-2565</a></dd>
+                                <dt>이메일</dt>
+                                <dd><a href="mailto:khr0914@knu.ac.kr">khr0914@knu.ac.kr</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        © Kyungpook National University. All rights reserved.
+    </footer>
+</body>
+
+</html>
